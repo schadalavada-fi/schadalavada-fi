@@ -22,23 +22,23 @@ $Body.appInfoJson.properties = @{}
 
 $Body.appInfoJson.properties."anypoint.platform.client_id" = "44b1d81330084043b1a7489afbb39c74"
 
-$Body.appInfoJson.properties."sk" = "sYf%NslW0y&3lNRH*D$@"
+$Body.appInfoJson.properties."secure.key" = "sYf%NslW0y&3lNRH*D$@"
 
 $Body.appInfoJson.properties.env = "dev"
 
 $Body.appInfoJson.properties."api.id" = "17635838"
 
-$Body.appInfoJson.properties."anypoint.platform.client" = "c38042cda4FB4aA9B55ecE3D6af9fc18"
+$Body.appInfoJson.properties."anypoint.platform.client_secret" = "c38042cda4FB4aA9B55ecE3D6af9fc18"
 
 $Body.appInfoJson.propertiesOptions = @{}
 
-$Body.appInfoJson.propertiesOptions."sk" = @{}
+$Body.appInfoJson.propertiesOptions."secure.key" = @{}
 
-$Body.appInfoJson.propertiesOptions."sk".secure = $true
+$Body.appInfoJson.propertiesOptions."secure.key".secure = $true
 
-$Body.appInfoJson.propertiesOptions."anypoint.platform.client" = @{}
+$Body.appInfoJson.propertiesOptions."anypoint.platform.client_secret" = @{}
 
-$Body.appInfoJson.propertiesOptions."anypoint.platform.client".s = $true
+$Body.appInfoJson.propertiesOptions."anypoint.platform.client_secret".secure = $true
 
 $Body.appInfoJson.region = "us-west-1"
 
