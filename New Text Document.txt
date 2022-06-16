@@ -1,0 +1,72 @@
+# Header Section
+
+$Header = @{
+   'X-ANYPNT-ENV-ID' =  '4a96abfd-8eda-47f1-bb1e-4f5237cf1b64'
+   'X-ANYPNT-ORG-ID' = 'c6583ef4-f508-4ac3-bc0d-3b9fd79234ad'
+   'Authorization' = 'Bearer 1f75e5f3-3a3d-43df-8a33-2755835f1431'
+}
+
+# Body section
+
+$Body = @{}
+
+$Body.file = "E:/actions-runner/workspace/PCG-Mulesoft-sapi-ecm-documents/PCG-Mulesoft-sapi-ecm-documents/target/sapi-ecm-documents-v1-1.0.2.jar" 
+$Body.appInfoJson = @{}
+
+$Body.appInfoJson.domain = "testfi-fi-v1-proxy-test"
+$Body.appInfoJson.muleVersion = @{}
+
+$Body.appInfoJson.muleVersion.version = "4.4.0"
+
+$Body.appInfoJson.properties = @{}
+
+$Body.appInfoJson.properties."anypoint.platform.client_id" = "44b1d81330084043b1a7489afbb39c74"
+
+$Body.appInfoJson.properties."sk" = "sYf%NslW0y&3lNRH*D$@"
+
+$Body.appInfoJson.properties.env = "dev"
+
+$Body.appInfoJson.properties."api.id" = "17635838"
+
+$Body.appInfoJson.properties."anypoint.platform.client" = "c38042cda4FB4aA9B55ecE3D6af9fc18"
+
+$Body.appInfoJson.propertiesOptions = @{}
+
+$Body.appInfoJson.propertiesOptions."sk" = @{}
+
+$Body.appInfoJson.propertiesOptions."sk".secure = $true
+
+$Body.appInfoJson.propertiesOptions."anypoint.platform.client" = @{}
+
+$Body.appInfoJson.propertiesOptions."anypoint.platform.client".s = $true
+
+$Body.appInfoJson.region = "us-west-1"
+
+$Body.appInfoJson.monitoringEnabled = $true
+
+$Body.appInfoJson.monitoringAutoRestart = $true
+
+$Body.appInfoJson.workers = @{}
+
+$Body.appInfoJson.workers.amount = 1
+
+$Body.appInfoJson.workers.type = @{}
+
+$Body.appInfoJson.workers.type.name = "Micro"
+
+$Body.appInfoJson.workers.type.weight = 0.1
+
+$Body.appInfoJson.workers.type.cpu = "0.1 vCores"
+
+$Body.appInfoJson.workers.type.memory = "500 MB memory"
+
+$Body.appInfoJson.loggingNgEnabled = $true
+
+$Body.appInfoJson.persistentQueues = $true
+
+$Body.autoStart = "true"
+
+$Body = $Body | ConvertTo-Json -Depth 5
+
+
+Invoke-WebRequest -Method Post -Uri "https://anypoint.mulesoft.com/cloudhub/api/v2/applications" -Headers $Header -Body $Body -ContentType "application/json"
